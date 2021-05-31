@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { ComponentStore } from '@ngrx/component-store';
+import { Observable } from 'rxjs';
 
 import { Car } from '../models';
 import { ParkingLotService } from './parking-lot.service';
-import { Observable } from 'rxjs';
 
 export const enum LoadingState {
   INIT = 'INIT',
@@ -34,9 +34,7 @@ function getError(callState: CallState): ErrorState['errorMsg'] | null {
   return null;
 }
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class StoreService extends ComponentStore<ParkingState> {
   private readonly cars$: Observable<Car[]>;
   private readonly loading$: Observable<boolean>;
