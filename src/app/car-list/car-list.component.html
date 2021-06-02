@@ -1,0 +1,18 @@
+<table *ngIf="cars.length; else noCars">
+  <tr>
+    <th>Plate</th>
+    <th>Brand</th>
+    <th>Model</th>
+    <th>Color</th>
+  </tr>
+  <tr *ngFor="let car of cars; index as i">
+    <td>{{ car.plate }}</td>
+    <td>{{ car.brand }}</td>
+    <td>{{ car.model }}</td>
+    <td>{{ car.color }}</td>
+  </tr>
+</table>
+
+<ng-template #noCars>
+  <p>No cars in the parking lot</p>
+</ng-template>
