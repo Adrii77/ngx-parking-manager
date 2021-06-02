@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/40627664/120461305-2d75b200-c39a-11eb-8ae0-34a8157256c3.png)
+
 # NgxParkingManager
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
